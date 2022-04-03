@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="deneme">
+        İnönü Üniversitesi, 28 Ocak 1975 tarihinde Türkiye Büyük Millet Meclisinde, 25 Mart 1975 tarihinde ise Cumhuriyet Senatosunda kabul edilen ve 3 Nisan 1975 tarihli Resmî Gazete'de yayımlanarak yürürlüğe giren 1872 sayılı ‘İnönü Üniversitesi Kanunu’ ile kurulmuş olup, 1976-1977 eğitim-öğretim yılından itibaren eğitim hizmeti vermeye başlamıştır. 1984 yılına kadar şimdiki Sadreddin Konevî Anadolu İmam Hatip Lisesi binasında faaliyetlerini sürdüren Üniversitemiz, 1984-1985 Akademik Yılında mevcut yerleşkesine geçmiş ve hızla gelişmeye başlamıştır.
+
+
+    </p>
+
+    <button onclick="RenginiDegistir()">Rengini Degis</button>
+    <input id="text" />
+    <button onclick="Topla">Topla</button>
+    <script>
+      
+      
+      function RenginiDegistir() {
+        var metin = document.getElementById("deneme").innerHTML;
+        var text = document.getElementById("text").value;
+        var metin = metin.replaceAll(
+          text,
+          "<span style='color:red'>" + text + "</span>"
+        );
+        document.getElementById("deneme").innerHTML = metin;
+      }
+    </script>
+  </body>
+</html>

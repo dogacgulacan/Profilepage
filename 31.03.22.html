@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <script>
+        var dizi=[];
+        function push(c){
+            var c=document.getElementById("veri").value;
+            dizi.push(c);
+            document.getElementById("sonuc").innerHTML=dizi;
+        }
+        function pop(){
+            dizi.pop();
+            document.getElementById("sonuc").innerHTML=dizi;
+        }
+        function tekrarSil(){
+            b=dizi.length;
+            var i,j;
+            for(i=0;i<b;i++){
+                var a=dizi[i];
+                for(j=i+1;j<b;j++){
+                    if(a==dizi[j]){
+                        delete dizi[j];
+                        var b=dizi.length;
+                    }
+                }
+            }
+            document.getElementById("sonuc").innerHTML=dizi;
+        }
+    </script>
+</head>
+<body>
+
+    <input type="text" id="veri" /><br /><br />
+    <button onclick="push()">PUSH</button>
+    <button onclick="pop()">POP</button>
+    <button onclick="tekrarSil()">TEKRAR EDENİ SİL</button>
+    <textarea id="sonuc"></textarea>
+
+
+   
+
+
+</body>
+</html>
